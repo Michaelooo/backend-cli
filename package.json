@@ -1,0 +1,40 @@
+{
+  "name": "backend_cli",
+  "version": "1.0.0",
+  "description": "a quick configuration for backend project.",
+  "main": "app.js",
+  "author": "MichaelCheng <422201870@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "mocha",
+    "docker:build": "docker build -t test:v1 .",
+    "docker:push": "docker push test:v1",
+    "docker:all": "npm run docker:build && npm run docker:push"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "fs": "^0.0.1-security",
+    "ftp-client": "^0.2.2",
+    "joi": "^13.1.1",
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-compress": "^2.0.0",
+    "koa-cors": "^0.0.16",
+    "koa-helmet": "^3.3.0",
+    "koa-router": "^7.3.0",
+    "lodash": "^4.17.4",
+    "moment": "^2.20.1",
+    "mongoose": "^5.0.1",
+    "nodemon": "^1.14.11",
+    "path": "^0.12.7",
+    "request-promise": "^4.2.2",
+    "require-tree": "^1.1.1",
+    "sequelize": "^4.32.1",
+    "url": "^0.11.0",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.0.0"
+  }
+}
