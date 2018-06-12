@@ -2,9 +2,8 @@ const config   = require('../config');
 let Promise    = require('bluebird');
 let _          = require('lodash');
 const logger = require('../libs/logger');
-const Roles = require('../schemas/roles');
-const Users = require('../schemas/users');
-const Auth = require('../middlewares/auth');
+const mongoose = require("mongoose");
+const Roles = mongoose.model('roles');
 
 module.exports = router => {
 
