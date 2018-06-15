@@ -41,9 +41,27 @@ client.on("close", function() {
 	logger.info(config.mongoose.uri + " close");
 });
 
-// 添加 schema
+// 添加 schema,指定目录
 let Schema = mongoose.Schema;
-let schemasConfig = requireTree("../schemas");
+let schemasConfig = requireTree("../schemas/user");
+
+// schema 中间件
+function schemaMiddleware(name, newSchema) {
+	if (name == "users" || name == "roles") {
+    newSchema.pre("create", function(next) {
+      this.update({}, { $set: { create_at: new Date() } });
+      next();
+    });
+    newSchema.pre("update", function(next) {
+      this.update({}, { $set: { updated_at: new Date() } });
+      next();
+    });
+    newSchema.pre("save", function(next) {
+      this.create_at = new Date();
+      next();
+    });
+  }
+}
 
 // 规范化管理 schema ， 同一功能模块的放在同一文件夹
 _.forEach(schemasConfig, (config, name) => {
@@ -72,4 +90,4 @@ function createSchema(name, schema, options, indexes) {
 }
 
 module.exports = client;
-module.exports.GridFs = Grid(client.db, mongoose.mongo);
+// module.exports.GridFs = Grid(client.db, mongoose.mongo);

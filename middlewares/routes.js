@@ -1,10 +1,3 @@
-/*
- * @Author: lizhonghui
- * @Date:   2016-09-05 17:19:59
- * @Last Modified by:   lizhonghui
- * @Last Modified time: 2016-09-06 17:12:21
- */
-
 const Router = require("koa-router");
 const fs = require("fs");
 const path = require("path");
