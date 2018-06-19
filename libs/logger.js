@@ -1,5 +1,6 @@
 const winston = require("winston");
 const moment = require("moment");
+const mkdirp = require('mkdirp');
 const config = require("../config");
 const Logger = winston.Logger;
 const File = winston.transports.File;
@@ -16,8 +17,12 @@ let transports = [
 	})
 ];
 
-// 如果不在eagle里
+// 如果不在eagle里,新建文件夹
 if (!config.eagle) {
+  mkdirp('./logs', err => {
+    if (err) console.error(err);
+    else console.log('create file path success');
+  })
 	transports.push(
 		new File({
 			name: "common",
