@@ -18,7 +18,7 @@ let transports = [
 	})
 ];
 
-const logPath = path.join(__dirname,'logs');
+const logPath = path.join('../','logs');
 
 // 如果不在eagle里,新建文件夹
 if (!config.eagle) {
