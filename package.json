@@ -14,6 +14,8 @@
   },
   "dependencies": {
     "bluebird": "^3.5.1",
+    "decompress": "^4.2.0",
+    "decompress-unzip": "^4.0.1",
     "fs": "^0.0.1-security",
     "ftp-client": "^0.2.2",
     "gridfs-stream": "^1.1.1",
@@ -26,6 +28,7 @@
     "koa-multer": "^1.0.2",
     "koa-router": "^7.3.0",
     "lodash": "^4.17.4",
+    "mkdirp": "^0.5.1",
     "moment": "^2.20.1",
     "mongoose": "^5.0.1",
     "nodemon": "^1.14.11",
@@ -34,10 +37,10 @@
     "request-promise": "^4.2.2",
     "require-tree": "^1.1.1",
     "sequelize": "^4.32.1",
+    "unzip": "^0.1.11",
     "url": "^0.11.0",
     "uuid": "^3.2.1",
-    "winston": "^2.4.0",
-    "mkdirp": "^0.5.1"
+    "winston": "^2.4.0"
   },
   "devDependencies": {
     "mocha": "^5.0.0"
