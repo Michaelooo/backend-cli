@@ -36,6 +36,7 @@
     "request": "^2.87.0",
     "request-promise": "^4.2.2",
     "require-tree": "^1.1.1",
+    "rsync": "^0.6.1",
     "sequelize": "^4.32.1",
     "unzip": "^0.1.11",
     "url": "^0.11.0",

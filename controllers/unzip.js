@@ -124,12 +124,9 @@ module.exports = router => {
   });
   // plan a
   router.put('/', async (ctx) => {
-    let reg = /^\d|\s/;
     try {
-
-
       let res = await unzipSteam(ctx, 'ceshi.zip', 'output/path');
-      console.res('ss'.res)
+      console.log('ss'.res)
 
     } catch (err) {
       return commonError(ctx, err, resErr.UnknownError.code, err.toString());
