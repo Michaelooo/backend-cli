@@ -2,6 +2,11 @@ module.exports = {
 	mongo: {
 		uri: ""
 	},
+	session: {
+    key: "sid",
+    maxAge: 86400000,
+    httpOnly: true
+  },
 	mysql: {
 		uri: "",
 		minConn: 0,

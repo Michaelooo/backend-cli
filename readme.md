@@ -6,12 +6,13 @@
 
 * 简单的日志系统,，Winston
 * 自定义中间件， /middlewares
-* 工程化，
-* 上传附件相关
+* session 支持， koa-session
+* 远程同步， ftp-client, node-rsync
 * 大文件,koa-muter
-* 自动化发布，docker
-* 测试，
+* 发布，docker + shell 脚本
+* 单元测试，
 * 语义化编程，
-* api管理工具
+* api管理工具，RAP
+* api gateway, kong 
 
 待补充……

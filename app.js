@@ -66,8 +66,9 @@ app.use(visitlog);
 const response = require("./middlewares/response");
 app.use(response);
 
-//var session = require('koa-session');
-//app.use(session(app));
+// 使用session
+const session = require("koa-session");
+app.use(session(config.session, app));
 
 // 用户认证
 
