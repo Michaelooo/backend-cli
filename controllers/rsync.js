@@ -13,8 +13,6 @@ const Rsync = require('rsync');
 const mkdirp = require('mkdirp');
 const fs = require('fs');
 const path = require('path');
-const decompress = require('decompress');
-const decompressUnzip = require('decompress-unzip');
 let JoiValidatePromise = Promise.promisify(Joi.validate);
 
 // const Project = mongo.model('projects');
