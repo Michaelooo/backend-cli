@@ -14,6 +14,13 @@ module.exports = {
 		maxIdleTime: 3000
 	},
 	mongoose: {
-		uri: ""
-	}
+    uri: "mongodb://localhost:27017/db/test",
+    options: {
+      user: "",
+      pass: "",
+      auth: {
+        authdb: ""
+      }
+    }
+  }
 };

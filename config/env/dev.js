@@ -15,7 +15,15 @@ module.exports = {
 		maxConn: 6,
 		maxIdleTime: 3000
 	},
+	// 添加正确的mongo配置
 	mongoose: {
-		uri: ""
-	}
+    uri: "mongodb://localhost:27017/db/test",
+    options: {
+      user: "",
+      pass: "",
+      auth: {
+        authdb: ""
+      }
+    }
+  }
 };

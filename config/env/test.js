@@ -14,6 +14,13 @@ module.exports = {
     httpOnly: true
   },
 	mongoose: {
-		uri: ""
-	}
+    uri: "mongodb://localhost:27017/db/test",
+    options: {
+      user: "",
+      pass: "",
+      auth: {
+        authdb: ""
+      }
+    }
+  }
 };
